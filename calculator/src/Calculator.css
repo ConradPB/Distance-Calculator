@@ -1,5 +1,6 @@
 body {
-    background: linear-gradient(to right, #B224EF, #7579FF);
+    background-image: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1744&q=80');
+    background-size: cover;
     font-family: Arial, sans-serif;
     font-size: 18px;
     padding: 20px;
@@ -17,13 +18,15 @@ label {
 }
 
 input[type="text"],
-input[type="number"] {
+input[type='number'] {
     padding: 10px;
     border-radius: 5px;
     border: none;
     margin-bottom: 20px;
     width: 100%;
     box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0.8);
+
 }
 
 button {
@@ -45,7 +48,7 @@ button:hover {
     padding:20px;
     border-radius:10px;
     margin-bottom:20px;
-    background-image: linear-gradient(to right, #89f7fe, #66a6ff);
+    background-image: linear-gradient(to right, rgba(137,247,254,0.6), rgba(102,166,255,0.8));
 }
 
 .container{
@@ -66,8 +69,8 @@ p {
       padding: 0 20px;
     }
   
-    input[type="text"],
-    input[type="number"] {
+    input[type='text'],
+    input[type='number'] {
       font-size: 16px;
     }
   
