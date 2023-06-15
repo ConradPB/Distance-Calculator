@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './Calculator.css';
 
 function Calculator() {
     const [location1, setLocation1] = useState ({lat: 0, lng: 0});
@@ -24,11 +25,10 @@ function Calculator() {
         const lat1 = coordinates1.lat * (Math.PI / 180)
         const lat2 = coordinates2.lat * (Math.PI / 180)
 
-        const a = Math.sin(latD / 2) * Math.sin(latD / 2) +
-        Math.sin(lngD / 2) * Math.sin(lngD / 2) * Math.cos(lat1)
+        const a = Math.sin(latD / 2) * Math.sin(latD / 2) + Math.sin(lngD / 2) * Math.sin(lngD / 2) * Math.cos(lat1)
         * Math.cos(lat2);
 
-        const c = Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+        const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
 
         const d = R * c;
 
@@ -46,9 +46,9 @@ function Calculator() {
 
     return (
 
-        <div>
+        <div className='container'>
             <h1>Distance Calculator</h1>
-            <div>
+            <div className='location'>
                 <h2>Location 1</h2>
                 <label>
                     Address: 
@@ -77,8 +77,8 @@ function Calculator() {
                     />
                 </label>
             </div>
-            <div>
-                <h2>Location 2</h2>
+            <div className='location' >
+                <h2 >Location 2</h2>
                 <label>
                     Address: <input type='text' 
                     value={address2} 
