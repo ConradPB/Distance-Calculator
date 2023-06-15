@@ -18,11 +18,11 @@ function Calculator() {
 
 
         const R = 6371; // Radius of the earth (km)
-        const latD = (location2.lat - location1.lat) * (Math.PI / 180)
-        const lngD = (location2.lng - location1.lng) * (Math.PI / 180)
+        const latD = (coordinates2.lat - coordinates1.lat) * (Math.PI / 180)
+        const lngD = (coordinates2.lng - coordinates1.lng) * (Math.PI / 180)
 
-        const lat1 = location1.lat * (Math.PI / 180)
-        const lat2 = location2.lat * (Math.PI / 180)
+        const lat1 = coordinates1.lat * (Math.PI / 180)
+        const lat2 = coordinates2.lat * (Math.PI / 180)
 
         const a = Math.sin(latD / 2) * Math.sin(latD / 2) +
         Math.sin(lngD / 2) * Math.sin(lngD / 2) * Math.cos(lat1)
@@ -36,9 +36,9 @@ function Calculator() {
     };
 
     const getCoordinates = async (address) => {
-        const apiKey = 'YOUR API KEY HERE';
+        const apiKey = '09dd832a57f24fb7adae8701e8663196';
         const response = await
-        fetch();
+        fetch(`https://api.opencagedata.com/geocode/v1/json?q=${address}&key=${apiKey}`);
         const data = await response.json();
         const coordinates = data.results[0].geometry;
         return coordinates;
