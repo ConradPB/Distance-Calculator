@@ -49,6 +49,8 @@ button:hover {
     border-radius:10px;
     margin-bottom:20px;
     background-image: linear-gradient(to right, rgba(137,247,254,0.6), rgba(102,166,255,0.8));
+    overflow:auto;
+  
 }
 
 .container{
@@ -60,7 +62,11 @@ button:hover {
 }
 
 p {
-  color:white
+  color:lightyellow;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  font-style: italic;
+
 }
 
 @media (max-width: 600px) {

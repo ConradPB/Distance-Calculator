@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Calculator.css';
 
 function Calculator() {
@@ -9,16 +9,79 @@ function Calculator() {
     const [address1, setAddress1] = useState('');
     const [address2, setAddress2] = useState('');
 
+    const [reverseAddress1, setReversedAddress1] = useState('');
+    const [reverseAddress2, setReversedAddress2] = useState('');
+
+    const getCoordinates = async (address) => {
+        const apiKey = '09dd832a57f24fb7adae8701e8663196';
+        const response = await
+        fetch(`https://api.opencagedata.com/geocode/v1/json?q=${address}&key=${apiKey}`);
+        const data = await response.json();
+        const coordinates = data.results[0].geometry;
+        return coordinates;
+    }
+
+    const getAddress = async (coordinates) => {
+        const apiKey = '09dd832a57f24fb7adae8701e8663196';
+        const response = await
+        fetch(`https://api.opencagedata.com/geocode/v1/json?q=${coordinates.lat}+${coordinates.lng}&key=${apiKey}`);
+        const data = await response.json();
+        if (data.results && data.results.length > 0) {
+        const address = data.results[0].formatted;
+        return address;
+        } else {
+            console.log('Unable to find address for given location')
+            return 'No address found';
+        }
+    }
+
+    useEffect (() => {
+        const updateAddresses = async () => {
+            if (location1.lat && location1.lng) {
+                const address = await getAddress(location1);
+                setReversedAddress1(address)
+
+            }
+
+            if (location2.lat && location2.lng) {
+                const address = await getAddress(location2);
+                setReversedAddress2(address)
+
+            }
+        }
+
+        updateAddresses();
+
+    }, [location1, location2])
+
+
+
 
     const calculateDistance = async () => {
-        const coordinates1 = await getCoordinates(address1);
+        console.log('location1:', location1);
+        console.log('location2:', location2);
+
+        let coordinates1;
+        let coordinates2;
+
+        if (address1){
+
+        coordinates1 = await getCoordinates(address1);
         setLocation1(coordinates1);
-
-        const coordinates2 = await getCoordinates(address2);
+} else {
+    coordinates1 = location1;
+}
+        if (address2){
+        coordinates2 = await getCoordinates(address2);
         setLocation2(coordinates2);
+} else {
+    coordinates2 = location2;
 
+        }
 
         const R = 6371; // Radius of the earth (km)
+        console.log('coordinates1:', coordinates1);
+        console.log('coordinates2:', coordinates2);
         const latD = (coordinates2.lat - coordinates1.lat) * (Math.PI / 180)
         const lngD = (coordinates2.lng - coordinates1.lng) * (Math.PI / 180)
 
@@ -35,21 +98,14 @@ function Calculator() {
         setDistance(d)
     };
 
-    const getCoordinates = async (address) => {
-        const apiKey = '09dd832a57f24fb7adae8701e8663196';
-        const response = await
-        fetch(`https://api.opencagedata.com/geocode/v1/json?q=${address}&key=${apiKey}`);
-        const data = await response.json();
-        const coordinates = data.results[0].geometry;
-        return coordinates;
-    }
-
+    
     return (
 
         <div className='container'>
             <h1>Distance Calculator</h1>
             <div className='location'>
                 <h2>Location 1</h2>
+                <p>Address: {reverseAddress1 || address1} </p>
                 <label>
                     Address: 
                     <input 
@@ -79,6 +135,7 @@ function Calculator() {
             </div>
             <div className='location' >
                 <h2 >Location 2</h2>
+                <p>Address: {reverseAddress2 || address2} </p>
                 <label>
                     Address: <input type='text' 
                     value={address2} 
@@ -110,6 +167,7 @@ function Calculator() {
     );
 
 }
+
 
 
 export default Calculator;
