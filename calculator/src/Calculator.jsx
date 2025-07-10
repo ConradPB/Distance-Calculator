@@ -118,6 +118,33 @@ function Calculator() {
   };
 
   return (
+    <Container maxWidth="md" sx={{ py: 6 }}>
+      <Paper
+        elevation={10}
+        sx={{
+          p: 4,
+          borderRadius: 4,
+          background: 'linear-gradient(135deg, #1e3a8a, #7dd3fc)',
+          backdropFilter: 'blur(10px)',
+          animation: 'fadeIn 1s ease',
+        }}
+      >
+        <Typography
+          variant="h3"
+          align="center"
+          sx={{
+            color: '#fff',
+            mb: 4,
+            fontWeight: 800,
+            letterSpacing: '1px',
+            textShadow: '2px 2px 6px rgba(0,0,0,0.4)',
+          }}
+        >
+          Distance Calculator
+        </Typography>
+        
+      </Paper>
+    </Container>
   );
 }
 
