@@ -60,7 +60,65 @@ function Calculator() {
     }
   };
 
- 
+  // Update reverse addresses when coordinates change
+  const updateAddresses = useCallback(async () => {
+    if (location1.lat && location1.lng && !address1) {
+      setLoading(true);
+      const address = await reverseGeocode(location1);
+      setReverseAddress1(address);
+      setLoading(false);
+    }
+    if (location2.lat && location2.lng && !address2) {
+      setLoading(true);
+      const address = await reverseGeocode(location2);
+      setReverseAddress2(address);
+      setLoading(false);
+    }
+  }, [location1, location2, address1, address2]);
+
+  useEffect(() => {
+    updateAddresses();
+  }, [updateAddresses]);
+
+  // Calculate distance
+  const calculateDistance = async () => {
+    setError('');
+    setDistance(null);
+    setLoading(true);
+
+    try {
+      let coordinates1 = location1;
+      let coordinates2 = location2;
+
+      if (address1) {
+        coordinates1 = await geocodeAddress(address1);
+        setLocation1(coordinates1);
+      }
+      if (address2) {
+        coordinates2 = await geocodeAddress(address2);
+        setLocation2(coordinates2);
+      }
+
+      if (!coordinates1.lat || !coordinates1.lng || !coordinates2.lat || !coordinates2.lng) {
+        throw new Error('Please enter valid addresses or coordinates.');
+      }
+
+      const result = haversineDistance(
+        parseFloat(coordinates1.lat),
+        parseFloat(coordinates1.lng),
+        parseFloat(coordinates2.lat),
+        parseFloat(coordinates2.lng)
+      );
+      setDistance(result);
+    } catch (err) {
+      setError(err.message);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  return (
+  );
 }
 
 export default Calculator;
