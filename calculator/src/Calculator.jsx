@@ -281,7 +281,56 @@ function Calculator() {
               }}
             />
           </Box>
-          
+          <Button
+            variant="contained"
+            onClick={calculateDistance}
+            disabled={loading}
+            sx={{
+              mt: 2,
+              py: 1.5,
+              fontSize: '1.2rem',
+              fontWeight: 600,
+              background: 'linear-gradient(45deg, #0284c7, #22d3ee)',
+              '&:hover': {
+                background: 'linear-gradient(45deg, #0369a1, #0ea5e9)',
+                transform: 'scale(1.05)',
+              },
+              '&:disabled': {
+                background: '#6b7280',
+                color: '#d1d5db',
+              },
+              transition: 'all 0.3s ease',
+              borderRadius: 2,
+            }}
+          >
+            {loading ? <CircularProgress size={24} color="inherit" /> : 'Calculate Distance'}
+          </Button>
+          {error && (
+            <Typography
+              sx={{
+                mt: 2,
+                color: '#fecaca',
+                fontWeight: 500,
+                animation: 'fadeIn 0.5s ease',
+              }}
+            >
+              {error}
+            </Typography>
+          )}
+          {distance && (
+            <Box
+              sx={{
+                mt: 3,
+                p: 3,
+                borderRadius: 3,
+                background: 'rgba(255,255,255,0.15)',
+                animation: 'slideIn 0.5s ease',
+              }}
+            >
+              <Typography variant="h5" sx={{ color: '#fff', fontWeight: 600 }}>
+                Distance: {distance.km} km ({distance.miles} miles)
+              </Typography>
+            </Box>
           )}
         </Box>
       </Paper>
