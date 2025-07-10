@@ -142,7 +142,39 @@ function Calculator() {
         >
           Distance Calculator
         </Typography>
-        
+        <Box sx={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
+          <Box>
+            <Typography variant="h6" sx={{ color: '#e0f7fa', mb: 1, fontWeight: 500 }}>
+              Starting Point
+            </Typography>
+            <TextField
+              label="Address"
+              value={address1}
+              onChange={(e) => {
+                setAddress1(e.target.value);
+                setReverseAddress1('');
+              }}
+              fullWidth
+              variant="outlined"
+              placeholder="e.g., New York, NY"
+              sx={{
+                mb: 2,
+                input: { color: '#fff', fontWeight: 500 },
+                '& .MuiOutlinedInput-root': {
+                  '& fieldset': { borderColor: '#e0f7fa' },
+                  '&:hover fieldset': { borderColor: '#7dd3fc' },
+                  '&.Mui-focused fieldset': { borderColor: '#38bdf8' },
+                },
+                '& .MuiInputLabel-root': { color: '#e0f7fa' },
+                '& .MuiInputLabel-root.Mui-focused': { color: '#38bdf8' },
+              }}
+            />
+            <Typography sx={{ color: '#e0f7fa', mb: 1 }}>
+              {reverseAddress1 && !address1 ? `Resolved Address: ${reverseAddress1}` : ''}
+            </Typography>
+            
+          )}
+        </Box>
       </Paper>
     </Container>
   );
