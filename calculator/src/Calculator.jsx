@@ -172,7 +172,116 @@ function Calculator() {
             <Typography sx={{ color: '#e0f7fa', mb: 1 }}>
               {reverseAddress1 && !address1 ? `Resolved Address: ${reverseAddress1}` : ''}
             </Typography>
-            
+            <TextField
+              label="Latitude"
+              type="number"
+              value={location1.lat}
+              onChange={(e) => setLocation1({ ...location1, lat: e.target.value })}
+              fullWidth
+              variant="outlined"
+              placeholder="e.g., 40.7128"
+              sx={{
+                mb: 2,
+                input: { color: '#fff', fontWeight: 500 },
+                '& .MuiOutlinedInput-root': {
+                  '& fieldset': { borderColor: '#e0f7fa' },
+                  '&:hover fieldset': { borderColor: '#7dd3fc' },
+                  '&.Mui-focused fieldset': { borderColor: '#38bdf8' },
+                },
+                '& .MuiInputLabel-root': { color: '#e0f7fa' },
+                '& .MuiInputLabel-root.Mui-focused': { color: '#38bdf8' },
+              }}
+            />
+            <TextField
+              label="Longitude"
+              type="number"
+              value={location1.lng}
+              onChange={(e) => setLocation1({ ...location1, lng: e.target.value })}
+              fullWidth
+              variant="outlined"
+              placeholder="e.g., -74.0060"
+              sx={{
+                input: { color: '#fff', fontWeight: 500 },
+                '& .MuiOutlinedInput-root': {
+                  '& fieldset': { borderColor: '#e0f7fa' },
+                  '&:hover fieldset': { borderColor: '#7dd3fc' },
+                  '&.Mui-focused fieldset': { borderColor: '#38bdf8' },
+                },
+                '& .MuiInputLabel-root': { color: '#e0f7fa' },
+                '& .MuiInputLabel-root.Mui-focused': { color: '#38bdf8' },
+              }}
+            />
+          </Box>
+          <Box>
+            <Typography variant="h6" sx={{ color: '#e0f7fa', mb: 1, fontWeight: 500 }}>
+              Ending Point
+            </Typography>
+            <TextField
+              label="Address"
+              value={address2}
+              onChange={(e) => {
+                setAddress2(e.target.value);
+                setReverseAddress2('');
+              }}
+              fullWidth
+              variant="outlined"
+              placeholder="e.g., London, UK"
+              sx={{
+                mb: 2,
+                input: { color: '#fff', fontWeight: 500 },
+                '& .MuiOutlinedInput-root': {
+                  '& fieldset': { borderColor: '#e0f7fa' },
+                  '&:hover fieldset': { borderColor: '#7dd3fc' },
+                  '&.Mui-focused fieldset': { borderColor: '#38bdf8' },
+                },
+                '& .MuiInputLabel-root': { color: '#e0f7fa' },
+                '& .MuiInputLabel-root.Mui-focused': { color: '#38bdf8' },
+              }}
+            />
+            <Typography sx={{ color: '#e0f7fa', mb: 1 }}>
+              {reverseAddress2 && !address2 ? `Resolved Address: ${reverseAddress2}` : ''}
+            </Typography>
+            <TextField
+              label="Latitude"
+              type="number"
+              value={location2.lat}
+              onChange={(e) => setLocation2({ ...location2, lat: e.target.value })}
+              fullWidth
+              variant="outlined"
+              placeholder="e.g., 51.5074"
+              sx={{
+                mb: 2,
+                input: { color: '#fff', fontWeight: 500 },
+                '& .MuiOutlinedInput-root': {
+                  '& fieldset': { borderColor: '#e0f7fa' },
+                  '&:hover fieldset': { borderColor: '#7dd3fc' },
+                  '&.Mui-focused fieldset': { borderColor: '#38bdf8' },
+                },
+                '& .MuiInputLabel-root': { color: '#e0f7fa' },
+                '& .MuiInputLabel-root.Mui-focused': { color: '#38bdf8' },
+              }}
+            />
+            <TextField
+              label="Longitude"
+              type="number"
+              value={location2.lng}
+              onChange={(e) => setLocation2({ ...location2, lng: e.target.value })}
+              fullWidth
+              variant="outlined"
+              placeholder="e.g., -0.1278"
+              sx={{
+                input: { color: '#fff', fontWeight: 500 },
+                '& .MuiOutlinedInput-root': {
+                  '& fieldset': { borderColor: '#e0f7fa' },
+                  '&:hover fieldset': { borderColor: '#7dd3fc' },
+                  '&.Mui-focused fieldset': { borderColor: '#38bdf8' },
+                },
+                '& .MuiInputLabel-root': { color: '#e0f7fa' },
+                '& .MuiInputLabel-root.Mui-focused': { color: '#38bdf8' },
+              }}
+            />
+          </Box>
+          
           )}
         </Box>
       </Paper>
