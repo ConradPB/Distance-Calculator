@@ -98,7 +98,7 @@ If coordinates are entered without addresses, the app displays reverse-geocoded 
 Error messages guide users for invalid inputs or API failures.
 
 Screenshots
-Distance Calculator Screenshot
+![Distance Calculator Screenshot](public/screenshots/Screenshot%202025-07-11%20at%206.23.34%20PM.png)
 
 Contributing
 Feel free to submit issues or pull requests to improve the app.
