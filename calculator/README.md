@@ -100,11 +100,11 @@ Error messages guide users for invalid inputs or API failures.
 Screenshots
 ![Distance Calculator Screenshot](public/screenshots/Screenshot%202025-07-11%20at%206.23.34%20PM.png)
 
-**Contributing**
+_Contributing_
 Feel free to submit issues or pull requests to improve the app.
 Contact me at cpbmbaz57@gmail.com for feedback or collaboration.
 
-**License**
+_License_
 MIT License (see LICENSE)
 
 Built by Conrad Bugingo
