@@ -34,9 +34,7 @@ A React-based web application that calculates the straight-line distance between
    ```
 
 2. Install Dependencies
-   bash
-   Copy
-   Edit
+
    yarn install
 
 3. Set Up Environment Variables
