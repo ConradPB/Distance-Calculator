@@ -31,3 +31,89 @@ A React-based web application that calculates the straight-line distance between
    git clone https://github.com/ConradPB/distance-calculator.git
    cd distance-calculator
    ```
+
+## Setup
+
+1. Clone the Repository
+
+```bash
+git clone https://github.com/ConradPB/distance-calculator.git
+cd distance-calculator
+
+2. Install Dependencies
+bash
+Copy
+Edit
+yarn install
+3. Set Up Environment Variables
+Create a .env file in the project root.
+
+Add your OpenCage API key:
+
+env
+Copy
+Edit
+REACT_APP_OPENCAGE_API_KEY=your_opencage_api_key
+You can get a free API key from OpenCage (2,500 requests/day).
+
+4. Run Locally
+bash
+Copy
+Edit
+yarn start
+Open http://localhost:3000 in your browser.
+
+5. Build for Production
+bash
+Copy
+Edit
+yarn build
+Deployment
+Deploy on Vercel
+Install the Vercel CLI:
+
+bash
+Copy
+Edit
+npm install -g vercel
+Deploy:
+
+bash
+Copy
+Edit
+vercel
+Configure environment variables in Vercel’s dashboard:
+
+vbnet
+Copy
+Edit
+Key:   REACT_APP_OPENCAGE_API_KEY
+Value: Your OpenCage API key
+Set build settings:
+
+yaml
+Copy
+Edit
+Build Command:   react-scripts build
+Output Directory: build
+Usage
+Enter addresses (e.g., "New York, NY" and "London, UK") or coordinates (e.g., 40.7128, -74.0060 for New York).
+
+Click "Calculate Distance" to see the distance in kilometers and miles.
+
+If coordinates are entered without addresses, the app displays reverse-geocoded addresses.
+
+Error messages guide users for invalid inputs or API failures.
+
+Screenshots
+Distance Calculator Screenshot
+
+Contributing
+Feel free to submit issues or pull requests to improve the app.
+Contact me at cpbmbaz57@gmail.com for feedback or collaboration.
+
+License
+MIT License (see LICENSE)
+
+Built by Conrad Bugingo
+```
