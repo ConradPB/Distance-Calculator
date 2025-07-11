@@ -28,3 +28,48 @@ body {
   }
 }
 
+.MuiContainer-root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.MuiPaper-root {
+  backdrop-filter: blur(12px);
+  background: linear-gradient(135deg, rgba(30, 64, 175, 0.85), rgba(125, 211, 252, 0.85));
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.MuiPaper-root:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.MuiTextField-root label {
+  color: #e0f7fa !important;
+}
+
+.MuiTextField-root input::placeholder {
+  color: #bae6fd !important;
+  opacity: 0.8;
+}
+
+@media (max-width: 600px) {
+  .MuiTypography-h3 {
+    font-size: 1.8rem;
+  }
+
+  .MuiTypography-h6 {
+    font-size: 1.1rem;
+  }
+
+  .MuiButton-root {
+    font-size: 1rem;
+    padding: 8px;
+  }
+
+  .MuiPaper-root {
+    padding: 16px;
+  }
+}
