@@ -105,7 +105,8 @@ Screenshots
 Feel free to submit issues or pull requests to improve the app.
 Contact me at cpbmbaz57@gmail.com for feedback or collaboration.
 
-_License_
+## License
+
 MIT License (see LICENSE)
 
 Built by Conrad Bugingo
