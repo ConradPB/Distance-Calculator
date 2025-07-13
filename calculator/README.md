@@ -55,7 +55,7 @@ You can get a free API key from OpenCage (2,500 requests/day).
    yarn start
    Open http://localhost:3000 in your browser.
 
-5. Build for Production
+5. **Build for Production**
    bash
    Copy
    Edit
