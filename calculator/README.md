@@ -33,11 +33,11 @@ A React-based web application that calculates the straight-line distance between
    cd distance-calculator
    ```
 
-2. Install Dependencies
+2. **Install Dependencies**
 
    yarn install
 
-3. Set Up Environment Variables
+3. **Set Up Environment Variables**
    Create a .env file in the project root.
 
 Add your OpenCage API key:
@@ -48,7 +48,7 @@ Edit
 REACT_APP_OPENCAGE_API_KEY=your_opencage_api_key
 You can get a free API key from OpenCage (2,500 requests/day).
 
-4. Run Locally
+4. **Run Locally**
    bash
    Copy
    Edit
