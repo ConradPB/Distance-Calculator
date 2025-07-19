@@ -69,11 +69,8 @@ npm install -g vercel
 
 vercel
 
-Configure environment variables in Vercel’s dashboard:
+3. **Configure environment variables in Vercel’s dashboard:**
 
-vbnet
-Copy
-Edit
 Key: REACT_APP_OPENCAGE_API_KEY
 Value: Your OpenCage API key
 Set build settings:
