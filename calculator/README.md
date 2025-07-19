@@ -65,12 +65,10 @@ REACT_APP_OPENCAGE_API_KEY=your_opencage_api_key
 
 npm install -g vercel
 
-2. Deploy:
+2. **Deploy:**
 
-bash
-Copy
-Edit
 vercel
+
 Configure environment variables in Vercel’s dashboard:
 
 vbnet
