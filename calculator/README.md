@@ -38,9 +38,10 @@ A React-based web application that calculates the straight-line distance between
    yarn install
 
 3. **Set Up Environment Variables**
-   Create a .env file in the project root.
 
-Add your OpenCage API key:
+- Create a .env file in the project root.
+
+- Add your OpenCage API key:
 
 env
 Copy
