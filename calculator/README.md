@@ -81,7 +81,7 @@ Output Directory: build
 
 ## Usage
 
-Enter addresses (e.g., "New York, NY" and "London, UK") or coordinates (e.g., 40.7128, -74.0060 for New York).
+- Enter addresses (e.g., "New York, NY" and "London, UK") or coordinates (e.g., 40.7128, -74.0060 for New York).
 
 Click "Calculate Distance" to see the distance in kilometers and miles.
 
