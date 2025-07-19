@@ -71,13 +71,11 @@ vercel
 
 3. **Configure environment variables in Vercel’s dashboard:**
 
-Key: REACT_APP_OPENCAGE_API_KEY
-Value: Your OpenCage API key
-Set build settings:
+   Key: REACT_APP_OPENCAGE_API_KEY
+   Value: Your OpenCage API key
 
-yaml
-Copy
-Edit
+4. **Set build settings:**
+
 Build Command: react-scripts build
 Output Directory: build
 Usage
