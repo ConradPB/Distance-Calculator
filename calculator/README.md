@@ -54,19 +54,18 @@ REACT_APP_OPENCAGE_API_KEY=your_opencage_api_key
    - Open http://localhost:3000 in your browser.
 
 5. **Build for Production**
-   bash
-   Copy
-   Edit
-   yarn build
-   Deployment
-   Deploy on Vercel
-   Install the Vercel CLI:
 
-bash
-Copy
-Edit
+   yarn build
+
+## Deployment
+
+# Deploy on Vercel
+
+1. **Install the Vercel CLI:**
+
 npm install -g vercel
-Deploy:
+
+2. Deploy:
 
 bash
 Copy
