@@ -59,7 +59,7 @@ REACT_APP_OPENCAGE_API_KEY=your_opencage_api_key
 
 ## Deployment
 
-# Deploy on Vercel
+### Deploy on Vercel
 
 1. **Install the Vercel CLI:**
 
