@@ -85,7 +85,7 @@ Output Directory: build
 
 - Click "Calculate Distance" to see the distance in kilometers and miles.
 
-If coordinates are entered without addresses, the app displays reverse-geocoded addresses.
+- If coordinates are entered without addresses, the app displays reverse-geocoded addresses.
 
 Error messages guide users for invalid inputs or API failures.
 
