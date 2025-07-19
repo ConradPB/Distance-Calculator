@@ -100,6 +100,6 @@ Contact me at cpbmbaz57@gmail.com for feedback or collaboration.
 
 ## License
 
-MIT License (see LICENSE)
+## MIT License (see LICENSE)
 
 Built by Conrad Bugingo
