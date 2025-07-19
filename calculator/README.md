@@ -87,7 +87,7 @@ Output Directory: build
 
 - If coordinates are entered without addresses, the app displays reverse-geocoded addresses.
 
-Error messages guide users for invalid inputs or API failures.
+- Error messages guide users for invalid inputs or API failures.
 
 ## Screenshots
 
