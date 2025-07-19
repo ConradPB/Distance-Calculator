@@ -83,7 +83,7 @@ Output Directory: build
 
 - Enter addresses (e.g., "New York, NY" and "London, UK") or coordinates (e.g., 40.7128, -74.0060 for New York).
 
-- Click "Calculate Distance" to see the distance in kilometers and miles.
+- Click # to see the distance in kilometers and miles.
 
 - If coordinates are entered without addresses, the app displays reverse-geocoded addresses.
 
