@@ -5,7 +5,7 @@ A React-based web application that calculates the straight-line distance between
 ## Features
 
 - **Address or Coordinate Input**: Enter addresses (e.g., "New York, NY") or latitude/longitude coordinates to calculate distances.
-- **Geocoding**: Converts addresses to coordinates using the OpenCage Geocoding API
+- **Geocoding**: Converts addresses to coordinates using the OpenCage Geocoding API.
 - **Reverse Geocoding**: Displays resolved addresses for entered coordinates.
 - **Distance Calculation**: Computes straight-line distance in kilometers and miles using the Haversine formula.
 - **Responsive Design**: Optimized for desktop and mobile with a sleek blue-cyan gradient and map background.
